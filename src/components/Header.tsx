@@ -30,32 +30,36 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex md:grid md:grid-cols-3 items-center justify-between h-20">
           
           {/* Logo (Left) */}
-          <a href="#" className="flex items-center">
-            <img src="/gabdev-logo.svg" alt="Gabriel Nunes Logo" className="h-10 w-auto hover:opacity-80 transition-opacity" />
-          </a>
+          <div className="flex justify-start">
+            <a href="#" className="flex items-center">
+              <img src={`${import.meta.env.BASE_URL}/gabdev-logo.svg`} alt="Gabriel Nunes Logo" className="h-10 w-auto hover:opacity-80 transition-opacity" />
+            </a>
+          </div>
 
           {/* Nav (Center) */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-text/60 hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden md:flex justify-center">
+            <nav className="flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-text/60 hover:text-primary transition-colors whitespace-nowrap"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           {/* Actions (Right) */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center justify-end gap-4">
              {/* Language Toggle */}
              <button 
                 onClick={toggleLanguage}
@@ -76,12 +80,14 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-text hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex md:hidden justify-end flex-1">
+            <button 
+              className="text-text hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

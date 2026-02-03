@@ -15,7 +15,7 @@ export const About: React.FC = () => {
           <div className="w-full md:w-1/3 relative">
              <div className="aspect-square rounded-2xl overflow-hidden bg-surface/50 border border-white/5 flex items-center justify-center relative group">
                 <img 
-                  src="/about-pic.jpg" 
+                  src={`${import.meta.env.BASE_URL}/about-pic.jpg`} 
                   alt={profile.name} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
