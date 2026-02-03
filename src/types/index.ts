@@ -28,6 +28,7 @@ export interface Profile {
   name: string;
   role: string;
   summary: string;
+  about: string[]; // Array of paragraphs
   location?: string;
   socials: SocialLink[];
 }
