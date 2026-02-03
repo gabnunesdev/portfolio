@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   return (
     <section id="hero" className="pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center relative overflow-hidden bg-grid">
       {/* Radial Gradient overlay for grid */}
-      <div className="absolute inset-0 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-background mask-[radial-gradient(ellipse_at_center,transparent_20%,black_70%)] pointer-events-none" />
 
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 blur-[120px] rounded-full opacity-30 pointer-events-none" />
@@ -23,10 +23,10 @@ export const Hero: React.FC = () => {
         </div>
         
         {/* Name */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
+        <h1 className="text-5xl md:text-8xl font-bold text-white mb-2 tracking-tight">
           {profile.name.split(' ')[0]}
         </h1>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
+        <h1 className="text-5xl md:text-8xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
           {profile.name.split(' ').slice(1).join(' ')}
         </h1>
         
@@ -37,13 +37,13 @@ export const Hero: React.FC = () => {
 
         {/* Tech Stack Pills (Reference style) */}
         <div className="flex flex-wrap justify-center gap-2 mb-8 opacity-80">
-            <span className="text-primary font-medium">Java</span>
+            <span className="text-primary font-medium">Typescript</span>
             <span className="text-text/40">•</span>
-            <span className="text-primary font-medium">Spring Boot</span>
+            <span className="text-primary font-medium">Node.js</span>
             <span className="text-text/40">•</span>
-            <span className="text-primary font-medium">AWS</span>
+            <span className="text-primary font-medium">Docker</span>
             <span className="text-text/40">•</span>
-            <span className="text-primary font-medium">Microservices</span>
+            <span className="text-primary font-medium">React</span>
         </div>
         
         {/* Intro Text */}

@@ -6,6 +6,7 @@ export const translations = {
       skills: 'Tecnologias',
       projects: 'Projetos',
       experience: 'Experiência',
+      education: 'Formação',
       contact: 'Contato',
     },
     hero: {
@@ -28,6 +29,12 @@ export const translations = {
     experience: {
       title: 'Experiência Profissional',
     },
+    education: {
+        sectionTitle: 'Formação',
+        title: 'Certificações & Educação',
+        educationTitle: 'Educação',
+        certificationsTitle: 'Certificações'
+    },
     footer: {
       description: 'Construindo experiências digitais memoráveis com código limpo e design intuitivo.',
       rights: 'Todos os direitos reservados.'
@@ -40,6 +47,7 @@ export const translations = {
       skills: 'Skills',
       projects: 'Projects',
       experience: 'Experience',
+      education: 'Education',
       contact: 'Contact',
     },
     hero: {
@@ -61,6 +69,12 @@ export const translations = {
     },
     experience: {
       title: 'Professional Experience',
+    },
+    education: {
+        sectionTitle: 'Education',
+        title: 'Certifications & Education',
+        educationTitle: 'Education',
+        certificationsTitle: 'Certifications'
     },
     footer: {
       description: 'Building memorable digital experiences with clean code and intuitive design.',

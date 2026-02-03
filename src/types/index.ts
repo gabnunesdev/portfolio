@@ -11,6 +11,19 @@ export interface Skill {
   category?: string; // Optional: Backend, Frontend, Tools
 }
 
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  status: 'Concluído' | 'Cursando' | 'Em andamento';
+}
+
+export interface Certification {
+  title: string;
+  institution: string;
+  date: string;
+}
+
 export interface Experience {
   company: string;
   role: string;

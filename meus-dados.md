@@ -21,6 +21,7 @@ Atualmente, foco meu domínio técnico no ecossistema JavaScript/TypeScript (Rea
 - Node.js
 - TypeScript
 - JavaScript
+- Python
 - HTML
 - CSS
 - Git
@@ -30,6 +31,28 @@ Atualmente, foco meu domínio técnico no ecossistema JavaScript/TypeScript (Rea
 - Lucide React
 - Vite
 - GitHub Pages
+
+### Formação:
+
+Header: Certificações e Educação
+
+Educação:
+
+- Rocketseat | Completo
+  Formação FullStack | Out. de 2024 - Out de 2025
+
+- Unifatecie | Cursando
+  Análise e Desenvolviment de Sistemas | Abr. de 2025 - Atual
+
+- Origamid | Cursando
+  UX/UI Design | - Atual
+
+Certificações:
+
+- Out/2024 | O básico de Git e GitHub | Rocketseat
+- Jul/2025 | Entendendo Algoritmos e Fluxogramas | DIO
+- Mai/2025 | JavaScript | Rocketseat
+- Out/2025 | Fullstack | Rocketseat
 
 ### Projetos:
 

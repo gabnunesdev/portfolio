@@ -10,14 +10,14 @@ export const Experience: React.FC = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Professional Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Experiência Profissional</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div key={index} className="relative pl-8 md:pl-0">
+              <div key={index} className="relative pl-0 md:pl-0">
                 {/* Timeline Line (Desktop) */}
                 <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
                 

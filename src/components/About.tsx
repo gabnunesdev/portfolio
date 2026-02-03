@@ -10,8 +10,12 @@ export const About: React.FC = () => {
           {/* Decorative / Image placeholder side */}
           <div className="w-full md:w-1/3 relative">
              <div className="aspect-square rounded-2xl overflow-hidden bg-surface/50 border border-white/5 flex items-center justify-center relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-50 group-hover:opacity-100 transition-opacity" />
-                <span className="text-6xl font-bold text-white/5 select-none">GN</span>
+                <img 
+                  src="/about-pic.jpg" 
+                  alt={profile.name} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
              </div>
              {/* Decorative elements */}
              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/20 blur-2xl rounded-full" />
