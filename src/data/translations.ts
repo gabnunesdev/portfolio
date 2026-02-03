@@ -1,3 +1,8 @@
+import { profileData } from './profile';
+import { projectsData } from './projects';
+import { experienceData } from './experience';
+import { educationData, certificationsData } from './education';
+
 export const translations = {
   pt: {
     nav: {
@@ -38,6 +43,13 @@ export const translations = {
     footer: {
       description: 'Construindo experiências digitais memoráveis com código limpo e design intuitivo.',
       rights: 'Todos os direitos reservados.'
+    },
+    data: {
+        profile: profileData.pt,
+        projects: projectsData.pt,
+        experience: experienceData.pt,
+        education: educationData.pt,
+        certifications: certificationsData.pt
     }
   },
   en: {
@@ -79,6 +91,13 @@ export const translations = {
     footer: {
       description: 'Building memorable digital experiences with clean code and intuitive design.',
       rights: 'All rights reserved.'
+    },
+    data: {
+        profile: profileData.en,
+        projects: projectsData.en,
+        experience: experienceData.en,
+        education: educationData.en,
+        certifications: certificationsData.en
     }
   }
 };

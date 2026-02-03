@@ -15,7 +15,7 @@ export interface Education {
   institution: string;
   degree: string;
   period: string;
-  status: 'Concluído' | 'Cursando' | 'Em andamento';
+  status: 'Concluído' | 'Cursando' | 'Em andamento' | 'Completed' | 'In Progress';
 }
 
 export interface Certification {

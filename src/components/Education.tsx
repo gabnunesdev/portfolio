@@ -1,10 +1,10 @@
 import React from 'react';
 import { GraduationCap, Award } from 'lucide-react';
-import { education, certifications } from '../data/education';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const Education: React.FC = () => {
   const { t } = useLanguage();
+  const { education, certifications } = t.data;
 
   return (
     <section id="education" className="py-20 bg-background relative overflow-hidden">

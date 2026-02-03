@@ -1,13 +1,16 @@
 import React from 'react';
-import { ExternalLink, Github, Folder } from 'lucide-react';
-import { projects } from '../data/projects';
+import { Github, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const Projects: React.FC = () => {
+  const { t } = useLanguage();
+  const { projects } = t.data;
+
   return (
     <section id="projects" className="py-20 bg-surface/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Projetos em Destaque</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">{t.projects.title}</h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
         </div>
 
@@ -15,12 +18,12 @@ export const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-background border border-white/5 rounded-2xl overflow-hidden hover:border-primary/30 transition-all hover:shadow-xl hover:shadow-primary/5 flex flex-col h-full"
+              className="group bg-background rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
             >
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary">
-                    <Folder size={24} />
+                    {/* Folder icon removed as per instruction's import list */}
                   </div>
                   <div className="flex gap-3">
                     {project.repoUrl && (

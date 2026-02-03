@@ -1,10 +1,10 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import { profile } from '../data/profile';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
+  const { profile } = t.data;
 
   return (
     <section id="hero" className="pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center relative overflow-hidden bg-grid">
@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
         
         {/* Role */}
         <h2 className="text-lg md:text-xl font-mono text-text/60 mb-6">
-          {t.hero.roleSubtitle}
+          {profile.role}
         </h2>
 
         {/* Tech Stack Pills (Reference style) */}

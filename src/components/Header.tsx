@@ -33,8 +33,8 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo (Left) */}
-          <a href="#" className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
-            GN
+          <a href="#" className="flex items-center">
+            <img src="/gabdev-logo.svg" alt="Gabriel Nunes Logo" className="h-10 w-auto hover:opacity-80 transition-opacity" />
           </a>
 
           {/* Nav (Center) */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { profile } from '../data/profile';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const iconMap: Record<string, React.FC<any>> = {
   Github: Github,
@@ -9,6 +9,9 @@ const iconMap: Record<string, React.FC<any>> = {
 };
 
 export const Footer: React.FC = () => {
+  const { t } = useLanguage();
+  const { profile } = t.data;
+
   return (
     <footer className="bg-surface/50 border-t border-white/5 py-12">
       <div className="container mx-auto px-4 md:px-6">
@@ -16,7 +19,7 @@ export const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-bold text-text mb-2">{profile.name}</h3>
             <p className="text-text/60 text-sm max-w-md">
-              Construindo experiências digitais memoráveis com código limpo e design intuitivo.
+              {t.footer.description}
             </p>
           </div>
           
@@ -40,7 +43,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-white/5 text-center text-text/40 text-sm">
-          <p>© {new Date().getFullYear()} Gabriel Nunes Silva. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Gabriel Nunes Silva. {t.footer.rights}</p>
         </div>
       </div>
     </footer>

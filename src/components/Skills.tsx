@@ -1,7 +1,9 @@
 import React from 'react';
 import { skills } from '../data/skills';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const Skills: React.FC = () => {
+  const { t } = useLanguage();
   // Group skills by category
   const categories = skills.reduce((acc, skill) => {
     const category = skill.category || 'Other';
@@ -16,7 +18,7 @@ export const Skills: React.FC = () => {
     <section id="skills" className="py-20 bg-background relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Stack Técnica</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">{t.skills.title}</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 

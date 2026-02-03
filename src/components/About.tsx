@@ -1,7 +1,11 @@
 import React from 'react';
-import { profile } from '../data/profile';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const About: React.FC = () => {
+  const { t } = useLanguage();
+  const { profile } = t.data;
+
+  // ... (rest of the component)
   return (
     <section id="about" className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -24,7 +28,7 @@ export const About: React.FC = () => {
 
           {/* Content side */}
           <div className="w-full md:w-2/3">
-             <h2 className="text-3xl md:text-4xl font-bold text-text mb-2">Sobre Mim</h2>
+             <h2 className="text-3xl md:text-4xl font-bold text-text mb-2">{t.about.title}</h2>
              <h3 className="text-xl text-primary font-medium mb-6">
                 {profile.about[0]}
              </h3>
